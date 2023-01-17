@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+   <title>Filtered by Registration date</title>
+
+  <style>
+
+   body{
+
+   background-size: cover;
+   text-align: center;
+   font-weight: bold;
+   font-size: larger;
+  }
+
+  a:link, a:visited {
+  background-color: #112D4E;
+               color: #F9F7F7;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  }
+
+  a:hover, a:active {
+    background-color:#F9F7F7;
+  color:#112D4E;
+  }
+
+  </style>
+
+ </head>
+ <body>
+  <h1 style="color: #112D4E;font-family: 'PT Serif', serif; font-size:50px;">Student  Details</h1><br>
+
+ <table align="center" cellspacing = "2" cellpadding = "13" border = "10" width="700" >
+
+ <thead>
+ <td>ID</td>
+ <td>Name</td>
+ <td>Father's Name</td>
+ <td>Mother's Name</td>
+ <td>Age</td>
+  <td>Address</td>
+ <td>Registration Date</td>
+
+
+ </thead>
+ {% for row in rows %}
+ <tr>
+ <td>{{row["id"]}}</td>
+ <td>{{row["name"]}}</td>
+ <td>{{row["father_name"]}}</td>
+ <td>{{row["mother_name"]}}</td>
+ <td>{{row["age"]}}</td>
+ <td>{{row["address"]}}</td>
+ <td>{{row["reg_date"]}}</td>
+ </tr>
+ {% endfor %}
+ </table>
+ <br><br>
+ <a href="/student_filter">Go back</a>
+ <br><h1>{{msg}}</h1><br><br>
+
+ </body>
+ </html>

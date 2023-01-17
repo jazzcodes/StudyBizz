@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <title>Add Student</title>
+
+
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Playfair+Display:wght@400;500&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+ </head>
+ <body>
+ <header class="header">
+    <nav class="navbar">
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a class="nav-link" href="/"> <img src="{{url_for('static', filename='logo.png')}}" alt="Logo"
+                                                   class="logo center"/></a>
+            </li>
+
+        </ul>
+
+        <ul class="right-icons">
+            <li class="nav-item">
+                <a class="nav-link" href="tel:9872819427"><i class="fa fa-phone " style="font-size:36px;color:#3F72AF;"
+                                                             aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa fa-whatsapp" aria-hidden="true"
+                                                style="font-size:36px;color:#3F72AF;"></i></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa fa-envelope" aria-hidden="true"
+                                                style="font-size:36px;color:#3F72AF;"></i></a>
+            </li>
+        </ul>
+    </nav>
+
+</header>
+ <form action = "/saverecord" method="post">
+
+ <table class="form-container">
+
+  <tr><td class="label">Name</td><td><input type="text" name="name" ></td></tr>
+  <tr><td class="label">Father's Name</td><td><input type="text" name="father_name"></td></tr>
+  <tr><td class="label">Mother's Name</td><td><input type="text" name="mother_name"></td></tr>
+  <tr><td class="label">Age</td><td><input type="number" name="age"></td></tr>
+  <tr><td class="label">Address</td><td><input type="text" name="address"></td></tr>
+  <tr><td class="label">Registration Date</td><td><input type="date" name="reg_date"></td></tr>
+
+
+  <tr><td></td><td><input type="submit" value="Submit"></td></tr>
+
+ </table> </form>
+
+ </body>
+ </html>
